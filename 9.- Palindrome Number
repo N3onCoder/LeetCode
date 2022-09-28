@@ -1,0 +1,20 @@
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+
+function isPalindrome(palabraPolidrome) {
+
+    let caracteres = palabraPolidrome.length;
+    let redondeo = Math.floor(caracteres / 2);
+
+    for (var i = 0; i < redondeo; i++) {
+        if (palabraPolidrome[i] !== palabraPolidrome[caracteres - 1 - i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log(isPalindrome("123"));
